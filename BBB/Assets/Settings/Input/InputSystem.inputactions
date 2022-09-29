@@ -6,86 +6,196 @@
             "id": "34df24b2-4363-45aa-b264-d457c82d63c7",
             "actions": [
                 {
-                    "name": "MOUSE_DOWN1",
-                    "type": "Button",
+                    "name": "MOUSE_CLICK",
+                    "type": "Value",
                     "id": "f4362f07-70f0-44dd-9835-d77c77fa65b3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "MOUSE_MOVE",
-                    "type": "Button",
-                    "id": "bcaa9100-42a0-4dba-a4b6-3ebb56988700",
-                    "expectedControlType": "Button",
+                    "type": "Value",
+                    "id": "53355d46-ba84-454e-aff5-7b07d4e531b7",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
-                    "name": "MOUSE_UP",
-                    "type": "Button",
-                    "id": "e72b6c6e-83f2-403b-8b50-24ee24c8f2b1",
-                    "expectedControlType": "Button",
+                    "name": "MOUSE_HOLD",
+                    "type": "Value",
+                    "id": "cdf1b32a-c17a-4f7a-ada6-a47370de9d2d",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
-                    "name": "MOUSE_HOLDON",
-                    "type": "Button",
-                    "id": "eae15dcd-e71b-4383-b03d-2bbe1150ae6e",
-                    "expectedControlType": "Button",
+                    "name": "MOVE",
+                    "type": "Value",
+                    "id": "70e4ce13-9570-4573-b50e-cf88251289c6",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "78a5b241-379f-4668-940a-377172c01220",
-                    "path": "<Mouse>/leftButton",
+                    "name": "CLICK&&MOVE",
+                    "id": "cb641f87-6bed-4cf3-94a1-dc84ced86738",
+                    "path": "OneModifier",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MOUSE_DOWN1",
-                    "isComposite": false,
+                    "action": "MOUSE_MOVE",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "4244c5f5-e488-41e6-831c-cd4fbf127024",
-                    "path": "",
+                    "name": "Modifier",
+                    "id": "90a587a6-fd3b-43f2-9664-8457f04fbf8d",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "MOUSE_MOVE",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "4b1133b6-c5d8-4490-8f86-047dcee33ad2",
-                    "path": "",
+                    "name": "Binding",
+                    "id": "cc665413-b9c8-4865-b04a-c778c06c2226",
+                    "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MOUSE_UP",
+                    "action": "MOUSE_MOVE",
                     "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "CLICK",
+                    "id": "ebfed463-9d1f-4c3e-9bc0-afe5f0c9f42c",
+                    "path": "OneModifier",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MOUSE_CLICK",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "4e30f2f9-9609-420d-bf00-2ad1fd21b7f6",
-                    "path": "",
+                    "name": "modifier",
+                    "id": "827d2e88-e271-4db5-8034-1fcbb977ee19",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MOUSE_HOLDON",
+                    "action": "MOUSE_CLICK",
                     "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "46e61f8d-f4ad-43e1-ac1c-f99591f4904d",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MOUSE_CLICK",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "HOLD",
+                    "id": "52bc600e-d480-4fc8-a4b4-9926ed34a90f",
+                    "path": "OneModifier",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MOUSE_HOLD",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "Modifier",
+                    "id": "d4f3935c-09b0-42b8-8c3a-0e78668a5803",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MOUSE_HOLD",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Binding",
+                    "id": "fa22db26-5992-4a89-9531-13969c7cd82c",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MOUSE_HOLD",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "W/A/S/D",
+                    "id": "167d1e8a-96f2-45d9-b060-4052c10046da",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MOVE",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "7f60f0e8-0317-4713-a81f-e99d297b595e",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MOVE",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "7e9945c0-4225-4590-83e9-aa7b769d279a",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MOVE",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "7e75fe69-7881-450a-b5b2-d32f9bb2a420",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MOVE",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "7067c2f6-ee87-4462-9e91-5b720c390553",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MOVE",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

@@ -1,5 +1,5 @@
 
-public enum HeroClass
+public enum EventNames
 {
-    Warrior, Mage,工程师,召唤师
+    
 }
